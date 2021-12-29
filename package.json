@@ -1,13 +1,17 @@
 {
   "name": "hardhat-project",
   "scripts": {
-    "deploy": "npx hardhat run --network localhost scripts/deploy.js"
+    "init-code-hash": "npx hardhat run --config hardhat.core.config.js --network localhost scripts/init-code-hash.js",
+    "deploy-factory": "npx hardhat run --config hardhat.core.config.js --network localhost scripts/deploy-factory.js",
+    "deploy-router": "npx hardhat run --config hardhat.config.js --network localhost scripts/deploy-router.js",
+    "deploy-multicall": "npx hardhat run --config hardhat.multicall.config.js --network localhost scripts/deploy-multicall.js",
+    "deploy-token": "npx hardhat run --config hardhat.config.js --network localhost scripts/deploy-token.js",
+    "deploy": "sh deploy.sh"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.3",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
     "@uniswap/lib": "^4.0.1-alpha",
-    "@uniswap/v2-core": "^1.0.1",
     "chai": "^4.3.4",
     "envfile": "^6.17.0",
     "ethereum-waffle": "^3.4.0",

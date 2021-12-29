@@ -1,8 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
 
-// export PRIVKEY=0x
-const privateKey = process.env.PRIVKEY;
-
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
@@ -21,25 +18,15 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
    solidity: {
-      compilers: [
-         {
-            version: '0.5.16',
-            settings: {
-               optimizer: {
-                  enabled: true,
-                  runs: 200,
-               },
-            },
+      version: '0.6.6',
+      settings: {
+         optimizer: {
+            enabled: true,
+            runs: 200,
          },
-         {
-            version: '0.6.6',
-            settings: {
-               optimizer: {
-                  enabled: true,
-                  runs: 200,
-               },
-            },
-         },
-      ],
+      },
    },
+   paths: {
+      sources: "./contracts/periphery",
+    },
 };
