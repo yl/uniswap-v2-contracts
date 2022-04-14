@@ -1,10 +1,12 @@
 {
   "name": "hardhat-project",
   "scripts": {
-    "deploy@local": "npx hardhat run --network localhost scripts/deploy.js"
+    "deploy@local": "npx hardhat run --network localhost scripts/deploy-local.js",
+    "deploy@bsctest": "npx hardhat run --network bsctest scripts/deploy-bsctest.js"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.3",
+    "@nomiclabs/hardhat-etherscan": "^3.0.3",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
     "@uniswap/lib": "^4.0.1-alpha",
     "chai": "^4.3.4",
