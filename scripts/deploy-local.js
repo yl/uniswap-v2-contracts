@@ -22,11 +22,6 @@ async function main() {
   const router = await Router.deploy(factory.address, weth.address);
   await router.deployed();
   console.log("Router:", router.address);
-
-  const Token = await hre.ethers.getContractFactory("contracts/periphery/test/ERC20.sol:ERC20");
-  const token = await Token.deploy(hre.ethers.BigNumber.from('21000000000000000000000000'));
-  await token.deployed();
-  console.log("Token:", token.address);
 }
 
 main()
