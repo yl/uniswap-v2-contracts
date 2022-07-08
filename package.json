@@ -8,7 +8,7 @@
     "@nomiclabs/hardhat-ethers": "^2.0.3",
     "@nomiclabs/hardhat-etherscan": "^3.0.3",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
-    "@uniswap/lib": "^4.0.1-alpha",
+    "@uniswap/lib": "file:./contracts/lib",
     "chai": "^4.3.4",
     "envfile": "^6.17.0",
     "ethereum-waffle": "^3.4.0",
